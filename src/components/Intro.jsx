@@ -5,7 +5,7 @@ import './index.css'; // Import specific styles for Intro
 const Intro = () => {
   return (
     <div className="mt-24 bg-white relative overflow-hidden flex flex-col items-center" id='Intro'>
-      <h1 className="font-poppins text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl xl:text-6xl text-center">
+      <h1 className="font-poppins text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl xl:text-6xl text-center" >
         I'm <span className="text-orange-500">Syah Reza,</span>
         <div className='mt-4'>Product Designer</div>
       </h1>
