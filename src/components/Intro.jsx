@@ -11,6 +11,12 @@ const roles = [
   'UI/UX Designer'
 ];
 
+const testimonials = [
+  "Passionate and skilled Product Designer, excellent at generating insights, structuring research, and leading teams to success.",
+  "A visionary with a knack for creating intuitive designs that solve complex problems efficiently.",
+  "Highly dedicated professional who excels at transforming user needs into engaging digital experiences."
+];
+
 const TypingEffect = ({ text, isDeleting, speed }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
@@ -55,6 +61,7 @@ const TypingEffect = ({ text, isDeleting, speed }) => {
 const Intro = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   useEffect(() => {
     const roleInterval = setInterval(() => {
@@ -66,6 +73,14 @@ const Intro = () => {
     }, 5000); // Duration to show text (includes typing and deletion)
 
     return () => clearInterval(roleInterval); // Clean up interval on component unmount
+  }, []);
+
+  useEffect(() => {
+    const testimonialInterval = setInterval(() => {
+      setCurrentTestimonial(prevTestimonial => (prevTestimonial + 1) % testimonials.length);
+    }, 7000); // Duration to show testimonial
+
+    return () => clearInterval(testimonialInterval); // Clean up interval on component unmount
   }, []);
 
   return (
@@ -80,7 +95,7 @@ const Intro = () => {
 
       {/* Text Animation */}
       <motion.h1
-        className="font-poppins text-2xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-6xl xl:text-6xl text-center mt-24"
+        className="font-poppins text-5xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-6xl xl:text-6xl text-center mt-24"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -107,27 +122,46 @@ const Intro = () => {
 
       {/* Quote Animation */}
       <motion.div
-        className="absolute top-1/3 left-5 text-lg sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold"
+        className="hidden mt-20 md:block absolute top-1/3 left-5 text-lg sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold w-72"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -50 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
         <span className="text-gray-600">"</span>
-        <p className='text-sm text-gray-600 font-normal font-poppins mt-0'>
-          Passionate and skilled Product Designer,<br />
-          excellent at generating insights, structuring<br />
-          research, and leading teams to success.
-        </p>
+        <motion.p
+          key={currentTestimonial}
+          className='text-sm text-gray-600 font-normal font-poppins -mt-4'
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
+          {testimonials[currentTestimonial]}
+        </motion.p>
       </motion.div>
 
       {/* Experience Badge Animation */}
       <motion.div
-        className="hidden lg:flex flex-col gap-1 rounded-md absolute -top-10 bottom-0 m-auto right-10 bg-white p-0 h-fit w-1/3"
+        className="hidden lg:flex flex-col gap-1 rounded-md absolute top-28 bottom-0 m-auto right-10 bg-white p-0 h-fit w-1/3"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <div className="text-orange-500 text-2xl text-center">★★★★★</div>
+        <motion.div
+          className="text-orange-500 text-2xl text-center"
+          animate={{
+            scale: [1, 1.1, 1],
+            textShadow: [
+              '0 0 5px rgba(255, 165, 0, 0.7)',
+              '0 0 15px rgba(255, 165, 0, 0.9)',
+              '0 0 5px rgba(255, 165, 0, 0.7)'
+            ]
+          }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          ★★★★★
+        </motion.div>
         <div className="text-3xl text-center font-semibold font-poppins">1 Year</div>
         <div className="text-gray-500 text-center font-medium font-poppins">Experience</div>
       </motion.div>

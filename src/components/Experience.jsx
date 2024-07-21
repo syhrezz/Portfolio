@@ -36,7 +36,7 @@ const Experience = () => {
               </div>
               <div className="flex flex-col items-center mb-16">
               <div className="w-8 h-8 bg-orange-500 border-2 border-white rounded-full flex items-center justify-center mb-2 z-10">
-              <div className="w-4 h-4 bg-white rounded-full"></div>
+              <div className="w-4 h-4 bg-wh rounded-full"></div>
                 </div>
               </div>
               <div className="flex flex-col items-center">

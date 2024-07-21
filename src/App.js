@@ -8,6 +8,9 @@ import Achievements from "./components/Achievements.jsx";
 import "./App.css"; // Import the CSS file for styles
 import WhyYouShouldHireMe from "./components/WhyYouShouldHireMe.jsx";
 import PortfolioDocuments from "./components/PortfolioDocuments.jsx";
+import Technologies from "./components/Technologies.jsx";
+import Tools from "./components/Tools.jsx";
+// import NewExperience from "./components/newEx.jsx";
 
 function App() {
   return (
@@ -17,6 +20,8 @@ function App() {
       <About />
       <Experience />
       <Projects />
+      <Technologies />
+      <Tools />
       <PortfolioDocuments />
       <Achievements />
       <WhyYouShouldHireMe />

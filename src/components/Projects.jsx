@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import sirestoImage from '../assets/si-resto.png';
 import lawtusImage from '../assets/profile.png'; // Update the path accordingly
 import heartDiseaseImage from '../assets/profile.png'; // Update the path accordingly
+import speedsideImage from '../assets/profile.png'; // Add the correct path for the image
+import sirestoPOSImage from '../assets/profile.png'; // Add the correct path for the image
+import anvidImage from '../assets/profile.png'; // Add the correct path for the image
 
 const projects = [
   {
@@ -23,11 +26,35 @@ const projects = [
   },
   {
     title: 'Heart Disease Predictor',
-    tags: ['React', 'Flask', 'CatBoost', 'XGBoost'],
+    tags: ['Python', 'Flask', 'CatBoost', 'XGBoost'],
     description: 'A web application to predict heart disease risk based on user input.',
     link: '#heart-disease-predictor',
     color: 'from-yellow-400 to-red-500',
     image: heartDiseaseImage,
+  },
+  {
+    title: 'Speedside - Software Services',
+    tags: ['Java', 'Spring Boot', 'MySQL'],
+    description: 'A software services platform providing a range of solutions for businesses.',
+    link: '#speedside',
+    color: 'from-blue-400 to-indigo-500',
+    image: speedsideImage,
+  },
+  {
+    title: 'Siresto Point of Sale App',
+    tags: ['Flutter', 'Firebase', 'SQLite'],
+    description: 'A point of sale application designed for restaurants and retail businesses.',
+    link: '#siresto-pos',
+    color: 'from-teal-400 to-cyan-500',
+    image: sirestoPOSImage,
+  },
+  {
+    title: 'Anvid App for Early Diagnosis of COVID-19 Using ML',
+    tags: ['Python', 'TensorFlow', 'Keras'],
+    description: 'An application using machine learning to assist in the early diagnosis of COVID-19.',
+    link: '#anvid',
+    color: 'from-orange-400 to-red-500',
+    image: anvidImage,
   },
 ];
 
