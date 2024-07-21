@@ -5,7 +5,7 @@ import './index.css'; // Import specific styles for About
 
 const About = () => {
   return (
-    <div id="about" className="bg-FFF4EB py-60">
+    <div id="about" className="bg-FFF4EB py-32">
       <div className="container mx-auto px-10 flex flex-col lg:flex-row items-center gap-8">
         <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-end">
           <img className="absolute h-full w-2/3 top-12 left-0 opacity-25" src={el1} alt="Decorative Element" style={{ transform: 'scale(2)' }} />

@@ -25,13 +25,13 @@ const documents = [
 
 const PortfolioDocuments = () => {
   return (
-    <section id="portfolio-documents" className="py-16 bg-gray-100">
+    <section id="portfolio-documents" className="py-16 ml-32 bg-white">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-5xl font-bold text-center mb-16 text-gray-800"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: -50, scale: 0.8 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-500">
             My Portfolio Documents
@@ -39,22 +39,18 @@ const PortfolioDocuments = () => {
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {documents.map((document, index) => (
-            <motion.div
+            <motion.a
               key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-3"
-              whileHover={{ scale: 1.05, y: -10 }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              href={document.link}
+              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 p-3 flex flex-col justify-between"
+              whileHover={{ scale: 1.05, y: -10, boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.1, ease: 'easeInOut' }}
+              style={{ height: '86px' }} // Fixed height for consistency
             >
               <h3 className="text-base font-semibold mb-2 text-gray-800">{document.title}</h3>
-              <a
-                href={document.link}
-                className="inline-block py-1 px-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-xs"
-              >
-                View Document
-              </a>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
