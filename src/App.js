@@ -4,11 +4,10 @@ import Intro from "./components/Intro";
 import About from "./components/About";
 import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
-// import Services from "./components/Services";
-// import Works from "./components/Works";
-// import Contact from "./components/Contact";
-// import Footer from "./components/Footer";
+import Achievements from "./components/Achievements.jsx";
 import "./App.css"; // Import the CSS file for styles
+import WhyYouShouldHireMe from "./components/WhyYouShouldHireMe.jsx";
+import PortfolioDocuments from "./components/PortfolioDocuments.jsx";
 
 function App() {
   return (
@@ -18,10 +17,9 @@ function App() {
       <About />
       <Experience />
       <Projects />
-      {/* <Services />
-      <Works />
-      <Contact /> */}
-      {/* <Footer /> */}
+      <PortfolioDocuments />
+      <Achievements />
+      <WhyYouShouldHireMe />
     </div>
   );
 }
