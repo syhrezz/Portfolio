@@ -56,16 +56,14 @@ const PortfolioDocuments = () => {
   return (
     <section id="portfolio-documents" className="py-16 bg-white">
       <div className="container mx-auto px-1 lg:pl-28">
-        <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 text-gray-800"
-          initial={{ opacity: 0, y: -50, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.2, ease: 'easeInOut' }}
+      <motion.h1
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-500">
-            My Portfolio Documents
-          </span>
-        </motion.h2>
+          My <span className="text-orange-500">Portofolio Documents</span>
+        </motion.h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {documents.map((document, index) => (
             <motion.div

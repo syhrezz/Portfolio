@@ -40,16 +40,14 @@ const Achievements = () => {
   return (
     <section id="achievements" className="py-20 bg-FFF4EB">
       <div className="container mx-auto px-1 lg:pl-28">
-        <motion.h2
-          className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800"
+        <motion.h1
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.5 }}
         >
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-red-600">
-            Achievements & Milestones
-          </span>
-        </motion.h2>
+          Achievements <span className="text-orange-500">& Milestones</span>
+        </motion.h1>
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0 }}
