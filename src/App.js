@@ -12,16 +12,6 @@ import NewExperience from "./components/newExperience.jsx";
 // import Footer from "./components/Footer.jsx";
 // import NewExperience from "./components/newEx.jsx";
 
-const project = {
-  title: "My Project",
-  date: "2024-07-22",
-  description:
-    "This is a description of my project. It highlights the main features and functionalities.",
-  technologies: ["React", "Styled Components", "Framer Motion"],
-  github: "https://github.com/myproject",
-  liveDemo: "https://myprojectdemo.com",
-};
-
 function App() {
   return (
     <div className="font-poppins">
