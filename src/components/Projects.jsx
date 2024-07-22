@@ -6,6 +6,8 @@ import heartDiseaseImage from '../assets/profile.png'; // Update the path accord
 import speedsideImage from '../assets/profile.png'; // Add the correct path for the image
 import sirestoPOSImage from '../assets/profile.png'; // Add the correct path for the image
 import anvidImage from '../assets/profile.png'; // Add the correct path for the image
+import ProjectDetails from './ProjectDetails';
+
 
 const projects = [
   {
@@ -58,12 +60,22 @@ const projects = [
   },
 ];
 
+
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openProjectDetails = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeProjectDetails = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <section id="projects" className="py-32 bg-white">
-      <div className="container mx-auto px-1 lg:pl-28"> {/* Adjust padding based on navbar width */}
+      <div className="container mx-auto px-1 lg:pl-28">
         <motion.h2 
           className="text-4xl font-bold text-center mb-16 text-gray-800"
           initial={{ opacity: 0, y: -50 }}
@@ -108,14 +120,14 @@ const Projects = () => {
                     </motion.span>
                   ))}
                 </div>
-                <motion.a
-                  href={project.link}
+                <motion.button
+                  onClick={() => openProjectDetails(project)}
                   className={`inline-block py-2 px-4 bg-gradient-to-r ${project.color} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 relative z-10`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore Project
-                </motion.a>
+                </motion.button>
               </div>
               {hoveredIndex === index && (
                 <motion.div
@@ -130,6 +142,10 @@ const Projects = () => {
           ))}
         </div>
       </div>
+      
+      {selectedProject && (
+        <ProjectDetails project={selectedProject} onClose={closeProjectDetails} />
+      )}
     </section>
   );
 };

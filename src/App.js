@@ -9,8 +9,20 @@ import "./App.css"; // Import the CSS file for styles
 import WhyYouShouldHireMe from "./components/WhyYouShouldHireMe.jsx";
 import PortfolioDocuments from "./components/PortfolioDocuments.jsx";
 import Technologies from "./components/Technologies.jsx";
-import Tools from "./components/Tools.jsx";
+import DetailsProject from "./components/DetailsProject.jsx";
+import ProjectDetails from "./components/ProjectDetails.jsx";
+import NewExperience from "./components/newEx.jsx";
 // import NewExperience from "./components/newEx.jsx";
+
+const project = {
+  title: "My Project",
+  date: "2024-07-22",
+  description:
+    "This is a description of my project. It highlights the main features and functionalities.",
+  technologies: ["React", "Styled Components", "Framer Motion"],
+  github: "https://github.com/myproject",
+  liveDemo: "https://myprojectdemo.com",
+};
 
 function App() {
   return (
@@ -18,13 +30,15 @@ function App() {
       <Navbar />
       <Intro />
       <About />
-      <Experience />
+      <NewExperience />
+      {/* <Experience /> */}
       <Projects />
       <Technologies />
-      <Tools />
+      {/* <Tools /> */}
       <PortfolioDocuments />
       <Achievements />
-      <WhyYouShouldHireMe />
+      {/* <DetailsProject project={project} /> */}
+      {/* <WhyYouShouldHireMe /> */}
     </div>
   );
 }

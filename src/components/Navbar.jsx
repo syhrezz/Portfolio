@@ -10,7 +10,7 @@ const Navbar = () => {
       {/* Add logo or brand icon here */}
 
       <ul className="flex flex-col items-center flex-grow justify-center space-y-6">
-        {['Intro', 'About Me', 'Experience', 'Projects', 'Tech Stack', 'Achievements'].map((item, index) => (
+        {['Intro', 'About Me', 'Experience', 'Projects', 'Technologies', 'Achievements'].map((item, index) => (
           <motion.li
             key={index}
             whileHover={{ scale: 1.1, rotate: 5 }}
@@ -41,7 +41,7 @@ const Navbar = () => {
                 {item === 'Projects' && (
                   <path d="M384 476.1L192 421.2l0-385.3L384 90.8l0 385.3zm32-1.2l0-386.5L543.1 37.5c15.8-6.3 32.9 5.3 32.9 22.3l0 334.8c0 9.8-6 18.6-15.1 22.3L416 474.8zM15.1 95.1L160 37.2l0 386.5L32.9 474.5c-9.1-3.7-15.1-12.5-15.1-22.3l0-334.8c0-17 17.1-28.6 32.9-22.3z"/>
                 )}
-                {item === 'Tech Stack' && (
+                {item === 'Technologies' && (
                   <path d="M448 0H128c-17.7 0-32 14.3-32 32v448c0 17.7 14.3 32 32 32h320c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32zM128 32h320v448H128V32zm152 416l32-64 32 64h-64zm48-96h32v-96h-32v96zm0-128h32v-96h-32v96zm0-128h32V32h-32v96zm64 0h32V32h-32v96z"/>
                 )}
                 {item === 'Achievements' && (

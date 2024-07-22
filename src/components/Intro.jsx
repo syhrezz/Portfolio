@@ -84,7 +84,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center bg-white overflow-hidden" id='Intro'>
+    <div className="relative flex flex-col items-center bg-white overflow-hidden" id='intro'>
       {/* Background Animation */}
       <motion.div
         className="absolute bottom-0 right-0 left-0 mx-auto w-96 h-80 bg-orange-400 rounded-t-full overflow-hidden"

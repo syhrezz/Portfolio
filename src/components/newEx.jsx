@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const experiences = [
   {
@@ -25,14 +25,15 @@ const experiences = [
   }
 ];
 
+
 const NewExperience = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div id="experience" className="bg-gradient-to-b from-FFF4EB to-white py-20 font-poppins">
-      <div className="container mx-auto px-2 md:px-4">
-        <motion.h1 
-          className="text-5xl font-bold text-center text-gray-900 mb-16"
+    <section id="experience" className="bg-gradient-to-b from-FFF4EB to-white pt-2 sm:pt-20 font-poppins">
+      <div className="container w-1/2 mx-auto px-4 sm:px-6 lg:px-1">
+        <motion.h1
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -40,34 +41,51 @@ const NewExperience = () => {
           My <span className="text-orange-500">Experiences</span>
         </motion.h1>
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-orange-300" style={{ transform: 'translateX(-50%)' }}></div>
-          
           {experiences.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={index}
-              className={`flex flex-col md:flex-row items-center mb-16`}
+              className={`flex flex-col sm:flex-row items-center mb-12 sm:mb-16`}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className={`w-5/6 md:w-5/6 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'}`}>
-                <h2 className="text-2xl font-semibold text-gray-800">{exp.company}</h2>
-                <p className="text-gray-600 mb-2">{exp.period}</p>
-                <h3 className="text-xl font-semibold text-orange-500 mb-2">{exp.role}</h3>
-                <p className="text-gray-700">{exp.description}</p>
+              <div className={`w-full sm:w-5/12 ${index % 2 === 0 ? 'sm:pr-8 sm:text-right' : 'sm:pl-8 sm:order-last'}`}>
+                <motion.h2 
+                  className="text-xl sm:text-2xl font-semibold text-gray-800"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {exp.company}
+                </motion.h2>
+                <p className="text-sm sm:text-base text-gray-600 mb-2">{exp.period}</p>
+                <motion.h3 
+                  className="text-lg sm:text-xl font-semibold text-orange-500 mb-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {exp.role}
+                </motion.h3>
+                <p className="text-sm sm:text-base text-gray-700">{exp.description}</p>
               </div>
-              <div className="flex items-center justify-center w-16 h-16 bg-orange-500 rounded-full text-white text-2xl z-10 mx-4 my-0 md:my-0">
-                {exp.icon}
-              </div>
-              <div className="hidden md:block w-1/12"></div>
+              <div className="hidden sm:block sm:w-5/12"></div>
             </motion.div>
           ))}
         </div>
+        <AnimatePresence>
+          {hoveredIndex !== null && (
+            <motion.div
+              className="fixed bottom-4 right-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              Hover effect active for {experiences[hoveredIndex].company}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </div>
+    </section>
   );
 };
 
