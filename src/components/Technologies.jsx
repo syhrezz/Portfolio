@@ -119,7 +119,7 @@ const Technologies = () => {
   return (
     <section id="technologies" className="bg-FFF4EB py-20">
       <div className="container mx-auto px-4 md:px-8 lg:pl-28">
-      <motion.h1
+        <motion.h1
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
