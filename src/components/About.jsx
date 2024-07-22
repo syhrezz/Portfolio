@@ -15,7 +15,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div 
-            className="relative w-1/2 lg:w-1/2 flex justify-center lg:justify-end mb-2 lg:mb-0"
+            className="relative w-1/2 lg:w-1/2 flex hidden justify-center lg:justify-end mb-2 lg:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
