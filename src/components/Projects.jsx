@@ -1,26 +1,25 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import sirestoImage from '../assets/si-resto.png';
-import lawtusImage from '../assets/profile.png'; // Update the path accordingly
-import heartDiseaseImage from '../assets/profile.png'; // Update the path accordingly
-import speedsideImage from '../assets/profile.png'; // Add the correct path for the image
-import sirestoPOSImage from '../assets/profile.png'; // Add the correct path for the image
-import anvidImage from '../assets/profile.png'; // Add the correct path for the image
-import ProjectDetails from './ProjectDetails';
-
+import lawtusImage from '../assets/lawtus.png'; // Update the path accordingly
+import heartDiseaseImage from '../assets/heart.jpg'; // Update the path accordingly
+import speedsideImage from '../assets/speedside.png'; // Add the correct path for the image
+import relazeeImage from '../assets/relazee.png'; // Add the correct path for the image
+import anvidImage from '../assets/anvid.png'; // Add the correct path for the image
+import Modal from './Modal'; // Import the Modal component
 
 const projects = [
   {
     title: 'Relazee',
-    tags: ['React', 'Node.js', 'GraphQL', 'PostgreSQL'],
+    tags: ['System Analyst', 'UIUX Designer', 'Figma'],
     description: 'A platform to connect college students for partner searching and competition collaboration.',
     link: '#relazee',
     color: 'from-purple-400 to-pink-500',
-    image: sirestoImage,
+    image: relazeeImage,
   },
   {
     title: 'Lawtus',
-    tags: ['React', 'Node.js', 'GraphQL', 'PostgreSQL'],
+    tags: ['Product Manager', 'System Analyst'],
     description: 'A legaltech app to assist individuals with legal issues.',
     link: '#lawtus',
     color: 'from-green-400 to-blue-500',
@@ -36,7 +35,7 @@ const projects = [
   },
   {
     title: 'Speedside - Software Services',
-    tags: ['Java', 'Spring Boot', 'MySQL'],
+    tags: ['UIUX Designer', 'Figma'],
     description: 'A software services platform providing a range of solutions for businesses.',
     link: '#speedside',
     color: 'from-blue-400 to-indigo-500',
@@ -44,15 +43,15 @@ const projects = [
   },
   {
     title: 'Siresto Point of Sale App',
-    tags: ['Flutter', 'Firebase', 'SQLite'],
+    tags: ['System Analyst','UIUX Designer', 'Figma'],
     description: 'A point of sale application designed for restaurants and retail businesses.',
     link: '#siresto-pos',
     color: 'from-teal-400 to-cyan-500',
-    image: sirestoPOSImage,
+    image: sirestoImage,
   },
   {
-    title: 'Anvid App for Early Diagnosis of COVID-19 Using ML',
-    tags: ['Python', 'TensorFlow', 'Keras'],
+    title: 'Anvid App for Early Diagnosis of COVID-19 Using AI',
+    tags: ['System Analyst','UIUX Designer', 'Figma'],
     description: 'An application using machine learning to assist in the early diagnosis of COVID-19.',
     link: '#anvid',
     color: 'from-orange-400 to-red-500',
@@ -60,10 +59,10 @@ const projects = [
   },
 ];
 
-
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedProject, setSelectedProject] = useState(null);
+  const showExploreButton = false; // Set this to true to show the button
 
   const openProjectDetails = (project) => {
     setSelectedProject(project);
@@ -76,16 +75,14 @@ const Projects = () => {
   return (
     <section id="projects" className="py-32 bg-white">
       <div className="container mx-auto px-1 lg:pl-28">
-        <motion.h2 
-          className="text-4xl font-bold text-center mb-16 text-gray-800"
+      <motion.h1
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="bg-clip-text text-transparent bg-gray-800">
-            My Recent Works
-          </span>
-        </motion.h2>
+          My <span className="text-orange-500">Recent Works</span>
+        </motion.h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <motion.div
@@ -95,6 +92,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
+              onClick={() => openProjectDetails(project)} // Open modal on click
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`}></div>
               <div className="relative h-48 overflow-hidden">
@@ -120,14 +118,16 @@ const Projects = () => {
                     </motion.span>
                   ))}
                 </div>
-                <motion.button
-                  onClick={() => openProjectDetails(project)}
-                  className={`inline-block py-2 px-4 bg-gradient-to-r ${project.color} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 relative z-10`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Explore Project
-                </motion.button>
+                {showExploreButton && (
+                  <motion.button
+                    onClick={() => openProjectDetails(project)}
+                    className={`inline-block py-2 px-4 bg-gradient-to-r ${project.color} text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 relative z-10`}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Explore Project
+                  </motion.button>
+                )}
               </div>
               {hoveredIndex === index && (
                 <motion.div
@@ -144,7 +144,10 @@ const Projects = () => {
       </div>
       
       {selectedProject && (
-        <ProjectDetails project={selectedProject} onClose={closeProjectDetails} />
+        <Modal
+          image={selectedProject.image}
+          onClose={closeProjectDetails}
+        />
       )}
     </section>
   );

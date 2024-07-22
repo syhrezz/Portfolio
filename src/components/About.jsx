@@ -37,13 +37,13 @@ const About = () => {
             </motion.div>
           </motion.div>
           <motion.div 
-            className="w-full lg:w-1/2 flex flex-col gap-6 px-4 lg:px-0"
+            className="w-full lg:w-1/2 flex flex-col gap-2 px-4 lg:px-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
-              className="text-gray-900 font-bold text-3xl sm:text-4xl lg:text-5xl font-poppins"
+              className="text-gray-900 font-bold text-1xl sm:text-2xl lg:text-3xl font-poppins"
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -51,7 +51,7 @@ const About = () => {
               ABOUT ME
             </motion.h1>
             <motion.p 
-              className="text-gray-700 font-medium font-poppins text-base sm:text-lg leading-relaxed"
+              className="text-gray-700 font-medium font-poppins text-base sm:text-base leading-relaxed"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}

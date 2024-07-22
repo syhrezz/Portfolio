@@ -2,16 +2,14 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Intro from "./components/Intro";
 import About from "./components/About";
-import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 import Achievements from "./components/Achievements.jsx";
 import "./App.css"; // Import the CSS file for styles
 import WhyYouShouldHireMe from "./components/WhyYouShouldHireMe.jsx";
 import PortfolioDocuments from "./components/PortfolioDocuments.jsx";
 import Technologies from "./components/Technologies.jsx";
-import DetailsProject from "./components/DetailsProject.jsx";
-import ProjectDetails from "./components/ProjectDetails.jsx";
-import NewExperience from "./components/newEx.jsx";
+import NewExperience from "./components/newExperience.jsx";
+// import Footer from "./components/Footer.jsx";
 // import NewExperience from "./components/newEx.jsx";
 
 const project = {
@@ -37,6 +35,7 @@ function App() {
       {/* <Tools /> */}
       <PortfolioDocuments />
       <Achievements />
+      {/* <Footer /> */}
       {/* <DetailsProject project={project} /> */}
       {/* <WhyYouShouldHireMe /> */}
     </div>

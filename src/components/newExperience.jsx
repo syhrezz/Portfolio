@@ -19,7 +19,7 @@ const experiences = [
   {
     company: "Binar Academy, Online",
     period: "Aug 2022 - Dec 2022",
-    role: "PM Bootcamp",
+    role: "Product Management Bootcamp",
     description: "Developed product strategies, maintained roadmaps aligned with vision, managed customer requirements, conducted market research, and ensured timely project delivery.",
     icon: "🚀"
   }
@@ -31,7 +31,7 @@ const NewExperience = () => {
 
   return (
     <section id="experience" className="bg-gradient-to-b from-FFF4EB to-white pt-2 sm:pt-20 font-poppins">
-      <div className="container w-1/2 mx-auto px-4 sm:px-6 lg:px-1">
+      <div className="container w-1/2 mx-auto px-auto pt-16">
         <motion.h1
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}

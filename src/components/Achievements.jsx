@@ -38,7 +38,7 @@ const Achievements = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section id="achievements" className="py-20 bg-gradient-to-b from-gray-100 to-white">
+    <section id="achievements" className="py-20 bg-FFF4EB">
       <div className="container mx-auto px-1 lg:pl-28">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800"

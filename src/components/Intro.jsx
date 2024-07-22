@@ -8,14 +8,21 @@ const roles = [
   'Business Analyst',
   'System Analyst',
   'Product Manager',
-  'UI/UX Designer'
+  'UI/UX Designer',
+  'Programmer'
 ];
 
 const testimonials = [
   "Passionate and skilled Product Designer, excellent at generating insights, structuring research, and leading teams to success.",
   "A visionary with a knack for creating intuitive designs that solve complex problems efficiently.",
-  "Highly dedicated professional who excels at transforming user needs into engaging digital experiences."
+  "Highly dedicated professional who excels at transforming user needs into engaging digital experiences.",
+  "An innovative thinker who consistently delivers top-notch solutions and brings a fresh perspective to every project.",
+  "Detail-oriented and creative, with a proven track record of enhancing user experiences through thoughtful design.",
+  "A collaborative team player who integrates user feedback seamlessly into the design process, ensuring outstanding results.",
+  "Exceptional problem-solving skills combined with a strong understanding of current design trends and technologies.",
+  "A results-driven designer with a focus on user-centered design and a passion for creating impactful digital solutions."
 ];
+
 
 const TypingEffect = ({ text, isDeleting, speed }) => {
   const [displayedText, setDisplayedText] = useState('');
