@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   return (
     <nav
-      className="fixed top-28 left-8 w-16 py-24 bg-white bg-opacity-80 flex flex-col items-center z-50 rounded-xl shadow-xl  lg:flex"
+      className="fixed top-28 left-8 w-16 py-24 bg-white bg-opacity-80 flex hidden flex-col items-center z-50 rounded-xl shadow-xl  lg:flex"
       style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)', backdropFilter: 'blur(10px)' }}
     >
       {/* Add logo or brand icon here */}
