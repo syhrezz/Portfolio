@@ -74,7 +74,7 @@ const NewExperience = () => {
         <AnimatePresence>
           {hoveredIndex !== null && (
             <motion.div
-              className="fixed bottom-4 right-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg"
+              className="hidden lg:flex fixed bottom-4 right-4 bg-orange-500 text-white p-4 rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}

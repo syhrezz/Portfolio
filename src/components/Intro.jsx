@@ -94,7 +94,7 @@ const Intro = () => {
     <div className="relative flex flex-col items-center bg-white overflow-hidden" id='intro'>
       {/* Background Animation */}
       <motion.div
-        className="absolute bottom-0 right-0 left-0 mx-auto w-96 h-80 bg-orange-400 rounded-t-full overflow-hidden"
+        className="absolute bottom-0 right-0 left-0 mx-auto w-96 h-80 bg-orange-400 rounded-t-full overflow-hidden z-0"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: 'easeOut' }}
@@ -102,7 +102,7 @@ const Intro = () => {
 
       {/* Text Animation */}
       <motion.h1
-        className="font-poppins text-5xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-6xl xl:text-6xl text-center mt-24"
+        className="font-poppins text-5xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-5xl xl:text-5xl text-center mt-24 z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -119,7 +119,7 @@ const Intro = () => {
 
       {/* Profile Image Animation */}
       <motion.img
-        className="relative -mt-28 h-2/3 object-cover z-10"
+        className="relative -mt-28 h-2/3 object-cover z-50"
         src={profileImage}
         alt="Syah Reza, Product Designer"
         initial={{ opacity: 0, scale: 0.8 }}
@@ -129,7 +129,7 @@ const Intro = () => {
 
       {/* Quote Animation */}
       <motion.div
-        className="hidden mt-20 md:block absolute top-1/3 left-5 text-lg sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold w-72"
+        className="hidden mt-20 lg:flex absolute top-1/3 left-5 text-lg sm:left-10 sm:text-4xl md:left-1/4 md:text-6xl lg:left-5 xl:left-48 xl:text-7xl font-bold w-72"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -50 }}

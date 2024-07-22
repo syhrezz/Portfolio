@@ -15,7 +15,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.div 
-            className="hidden pl-20 sm:block md:block  relative w-1/2 lg:w-1/2 flex justify-center lg:justify-end mb-2 lg:mb-0"
+            className="hidden pl-20 lg:flex  relative w-1/2 lg:w-1/2 justify-center lg:justify-end mb-2 lg:mb-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -37,7 +37,7 @@ const About = () => {
             </motion.div>
           </motion.div>
           <motion.div 
-            className="w-full lg:w-1/2 flex flex-col gap-2 "
+            className="w-full lg:w-1/2 flex flex-col gap-2 px-2 lg:px-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
