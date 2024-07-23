@@ -9,6 +9,7 @@ import WhyYouShouldHireMe from "./components/WhyYouShouldHireMe.jsx";
 import PortfolioDocuments from "./components/PortfolioDocuments.jsx";
 import Technologies from "./components/Technologies.jsx";
 import NewExperience from "./components/newExperience.jsx";
+import ContactMe from "./components/ContactMe.jsx";
 // import Footer from "./components/Footer.jsx";
 // import NewExperience from "./components/newEx.jsx";
 
@@ -25,6 +26,7 @@ function App() {
       {/* <Tools /> */}
       <PortfolioDocuments />
       <Achievements />
+      <ContactMe />
       {/* <Footer /> */}
       {/* <DetailsProject project={project} /> */}
       {/* <WhyYouShouldHireMe /> */}
