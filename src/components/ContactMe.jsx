@@ -24,7 +24,7 @@ const ContactMe = () => {
           }}
         />
         <motion.h1 
-          className="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-center"
+          className="text-2xl md:text-4xl font-extrabold mb-2 leading-tight text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -32,7 +32,7 @@ const ContactMe = () => {
           Let's Connect!
         </motion.h1>
         <motion.p 
-          className="text-base md:text-lg mb-8 leading-relaxed text-center max-w-2xl mx-auto"
+          className="text-base md:text-lg mb-4 leading-relaxed text-center max-w-2xl mx-auto"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}
@@ -43,7 +43,7 @@ const ContactMe = () => {
           <motion.a
             href={cvFile}
             download="Syah_CV.pdf"
-            className="w-full sm:w-auto text-center py-3 px-4 bg-white text-[#FF6B35] font-bold rounded-full shadow-md hover:bg-[#F7C59F] hover:text-[#2B2D42] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B35]"
+            className="w-full sm:w-auto text-center py-3 px-4 bg-white text-[#FF6B35] font-semibold rounded-full shadow-md hover:bg-[#F7C59F] hover:text-[#2B2D42] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B35]"
             whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }}
             whileTap={{ scale: 0.95 }}
           >
@@ -51,7 +51,7 @@ const ContactMe = () => {
           </motion.a>
           <motion.a
             href="mailto:exzzact@gmail.com"
-            className="w-full sm:w-auto text-center py-3 px-4 bg-white text-[#FF6B35] font-bold rounded-full shadow-md hover:bg-[#F7C59F] hover:text-[#2B2D42] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B35]"
+            className="w-full sm:w-auto text-center py-3 px-4 bg-white text-[#FF6B35] font-semibold rounded-full shadow-md hover:bg-[#F7C59F] hover:text-[#2B2D42] transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF6B35]"
             whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }}
             whileTap={{ scale: 0.95 }}
           >
