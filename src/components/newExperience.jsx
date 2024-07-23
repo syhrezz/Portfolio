@@ -3,27 +3,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 import gitsImage from '../assets/company-pic/gits_ind.jpeg';
 import binarImage from '../assets/company-pic/binar.png';
 import rplImage from '../assets/company-pic/rpl.png';
-
 const experiences = [
   {
-    company: "GITS ID, Bandung",
+    company: "GITS ID, Bandung", // Update from picture
     period: "Feb 2023 - June 2023",
-    role: "Business Analyst",
-    description: "Translated business requirements into user stories, wireframes, and acceptance criteria. Assisted in project planning, estimation, documentation, and designed a PoC.",
+    role: "Business Analyst", // Update from picture
+    description: "Translated business requirements into user stories, wireframes, and acceptance criteria. Assisted in project estimation, timeline planning, and resource allocation. Contributed to project documentation and knowledge base enhancement. Designed and implemented a proof of concept for a product recommendation algorithm.",
     icon: gitsImage
   },
   {
-    company: "Software Eng. Lab., UNEJ",
+    company: "Software Eng. Lab., UNEJ", // Update from picture
     period: "Aug 2021 - Aug 2023",
-    role: "Research Assistant",
-    description: "Applied user-centered design and UX research to develop innovative products. Proficient in wireframing, prototyping, and UI design.",
+    role: "Research Assistant", // Update from picture
+    description: "Applied user-centered design principles to develop innovative products. Used UX research methodologies to identify user needs and inform product designs. Developed wireframes, storyboards, prototypes, and user interface design elements.",
     icon: rplImage
   },
   {
-    company: "Binar Academy, Online",
+    company: "Binar Academy, Online", // Update from picture
     period: "Aug 2022 - Dec 2022",
-    role: "Product Management Bootcamp",
-    description: "Developed product strategies, maintained roadmaps aligned with vision, managed customer requirements, conducted market research, and ensured timely project delivery.",
+    role: "Product Management Bootcamp", // Update from picture (assuming it's a program name)
+    description: "Developed product strategies, maintained roadmaps aligned with vision, and managed customer requirements. Conducted market research to identify customer needs and competitor offerings. Managed product development projects to ensure timely delivery.",
     icon: binarImage
   }
 ];
