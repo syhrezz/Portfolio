@@ -67,7 +67,14 @@ const NewExperience = () => {
                 </motion.h3>
                 <p className="text-sm sm:text-base text-gray-700">{exp.description}</p>
               </div>
-              <div className="hidden sm:block sm:w-5/12"></div>
+              <div className="hidden sm:block sm:w-5/12">
+                <motion.div
+                  className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mb-2"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  {exp.icon}
+                </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>
