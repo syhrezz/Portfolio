@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import gitsImage from '../assets/company-pic/gits_ind.jpeg';
 import binarImage from '../assets/company-pic/binar.png';
 import rplImage from '../assets/company-pic/rpl.png';
+import './index.css';
+
 const experiences = [
   {
     company: "GITS ID, Bandung", // Update from picture
@@ -31,7 +33,7 @@ const NewExperience = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section id="experience" className="bg-gradient-to-b from-FFF4EB to-white pt-8 sm:pt-20 pb-12 font-poppins">
+    <section id="experience" className="bg-FFF4EB to-white pt-8 pb-20 sm:pt-16 sm:pb-28 font-poppins">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12"
