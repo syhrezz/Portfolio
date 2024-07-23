@@ -128,7 +128,7 @@ const Technologies = () => {
           Tech <span className="text-orange-500">& Tools</span>
         </motion.h1>
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -136,7 +136,7 @@ const Technologies = () => {
           {techStack.map((tech, index) => (
             <motion.div
               key={index}
-              className="group flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
+              className="group flex flex-col items-center py-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -150,10 +150,10 @@ const Technologies = () => {
                 <img
                   src={tech.icon}
                   alt={`${tech.name} icon`}
-                  className="w-16 h-16  fill-current text-orange-500 stroke-orange-500 icon-orange"
+                  className="w-12 h-12  fill-current text-orange-500 stroke-orange-500 icon-orange"
                 />
               </motion.div>
-              <h2 className="text-xl font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
+              <h2 className="text-lg font-semibold text-gray-800 group-hover:text-orange-500 transition-colors duration-300">
                 {tech.name}
               </h2>
               <motion.div
