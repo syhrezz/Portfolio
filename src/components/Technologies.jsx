@@ -118,7 +118,7 @@ const techStack = [
 const Technologies = () => {
   return (
     <section id="technologies" className="bg-FFF4EB py-20">
-      <div className="container mx-auto px-4 md:px-8 lg:pl-28">
+      <div className="container mx-auto px-4 md:px-4 lg:pl-28">
         <motion.h1
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-12 sm:mb-16"
           initial={{ opacity: 0, y: -50 }}
@@ -128,7 +128,7 @@ const Technologies = () => {
           Tech <span className="text-orange-500">& Tools</span>
         </motion.h1>
         <motion.div 
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8"
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}

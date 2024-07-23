@@ -102,7 +102,7 @@ const Intro = () => {
 
       {/* Text Animation */}
       <motion.h1
-        className="font-poppins text-5xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-5xl xl:text-5xl text-center mt-24 z-10"
+        className="font-poppins text-5xl tracking-tight font-bold text-gray-700 sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl text-center mt-24 z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
