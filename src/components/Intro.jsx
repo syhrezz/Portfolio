@@ -85,7 +85,7 @@ const Intro = () => {
   useEffect(() => {
     const testimonialInterval = setInterval(() => {
       setCurrentTestimonial(prevTestimonial => (prevTestimonial + 1) % testimonials.length);
-    }, 7000); // Duration to show testimonial
+    }, 5000); // Duration to show testimonial
 
     return () => clearInterval(testimonialInterval); // Clean up interval on component unmount
   }, []);
@@ -169,7 +169,7 @@ const Intro = () => {
         >
           ★★★★★
         </motion.div>
-        <div className="text-3xl text-center font-semibold font-poppins">1 Year</div>
+        <div className="text-3xl text-center font-semibold font-poppins">&lt; 1 Year</div>
         <div className="text-gray-500 text-center font-medium font-poppins">Experience</div>
       </motion.div>
     </div>
