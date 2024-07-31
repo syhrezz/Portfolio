@@ -56,7 +56,7 @@ const About = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              An aspiring Product designer, now building a strong technical foundation and enhancing my problem-solving skills. Eager to make meaningful and delightful digital products that create an equilibrium between user needs and business goals.
+              An aspiring Product person, now building a strong technical foundation and enhancing my problem-solving skills. Eager to make meaningful and delightful digital products that create an equilibrium between user needs and business goals.
             </motion.p>
             <motion.div 
               className="mt-8 font-poppins space-y-6"

@@ -11,6 +11,10 @@ import Technologies from "./components/Technologies.jsx";
 import NewExperience from "./components/newExperience.jsx";
 import ContactMe from "./components/ContactMe.jsx";
 import Footer from "./components/Footer.jsx";
+import DetailedProject from "./components/DetailProj.jsx";
+import DetailedSiresto from "./components/DetailSiresto.jsx";
+import DetailedLawtus from "./components/DetailLawtus.jsx";
+import DetailedCVDPredictor from "./components/DetailedCVDPredictor.jsx";
 // import NewExperience from "./components/newEx.jsx";
 
 function App() {
@@ -22,6 +26,9 @@ function App() {
       <NewExperience />
       {/* <Experience /> */}
       <Projects />
+      <DetailedLawtus />
+      <DetailedSiresto />
+      <DetailedCVDPredictor />
       <Technologies />
       {/* <Tools /> */}
       <PortfolioDocuments />
