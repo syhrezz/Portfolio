@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import profileImage from '../assets/profile.png';
+import cvFile from '../assets/Syah_CV.pdf';
 import './index.css'; // Import specific styles for Intro
 
 const roles = [
@@ -171,6 +172,24 @@ const Intro = () => {
         </motion.div>
         <div className="text-3xl text-center font-semibold font-poppins">&lt; 1 Year</div>
         <div className="text-gray-500 text-center font-medium font-poppins">Experience</div>
+        <div className='flex justify-center items-center mt-4'>
+        <motion.a
+        href={cvFile}
+        download="Syah_CV.pdf"
+        className="relative overflow-hidden group bg-white text-orange-500 font-base py-2 px-5 rounded-md border border-orange-500 shadow-md hover:shadow-lg transition duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-orange-500"
+        whileHover={{ scale: 1.05, boxShadow: "0 5px 15px rgba(0,0,0,0.1)" }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span className="relative z-10 group-hover:text-orange-400 transition-colors duration-300">View Resume</span>
+        <motion.div
+          className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          initial={{ y: "100%" }}
+          whileHover={{ y: "0%" }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+        />
+      </motion.a>
+        </div>
+        
       </motion.div>
     </div>
   );
