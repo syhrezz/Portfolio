@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import projectImage1 from '../assets/si-resto.png';
-import projectImage2 from '../assets/relazee.png';
-import projectImage3 from '../assets/speedside.png';
+import projectImage2 from '../assets/siresto-pic/Mockup 1.png';
+import projectImage3 from '../assets/siresto-pic/Mockup 10.png';
 import relatedDocument from '../assets/Syah_CV.pdf';
 
 const DetailedSiresto = () => {
@@ -21,37 +21,33 @@ const DetailedSiresto = () => {
           "Conducted on-site research at various local restaurants to understand their workflows",
           "Developed user personas for both restaurant staff and customers",
           "Created wireframes and prototypes for an intuitive, easy-to-use POS interface",
-          "Designed a mobile app component for customer self-ordering and feedback",
-          "Implemented a modular design to allow for future scalability and feature additions",
-          "Ensured the system could work offline with data synchronization for areas with unstable internet"
+          "Designed a mobile app component for customer self-ordering and feedback"
         ],
         technicalDetails: {
-          frontEnd: ["React Native"],
-          backEnd: ["Node.js", "Express", "MongoDB"],
-          tools: ["Figma", "Jira", "Git", "Postman"]
+          frontEnd: ["Flutter"],
+          backEnd: ["Laravel", "MySql"],
+          tools: ["Figma"]
         },
         challenges: [
           "Designing a system simple enough for staff with varying levels of tech-savviness",
-          "Ensuring the app could function in areas with unreliable internet connectivity",
           "Balancing feature richness with performance on lower-end mobile devices",
           "Coordinating between team members and client stakeholders with different priorities"
         ],
         keyAchievements: [
           "Reduced average order processing time by 40%",
-          "Increased daily transaction volume by 25% due to improved efficiency",
-          "Achieved a 92% satisfaction rate among restaurant staff using the new system",
-          "Successfully deployed the system in 10 pilot restaurants within the first month post-launch"
+          "Achieved a 75% satisfaction rate among restaurant staff using the new system",
+          "Successfully get 70 playstore downloader during alpa-test soft-launch"
         ],
-        lessonLearned: "This project highlighted the importance of user-centered design in creating efficient business tools. It also reinforced the value of continuous stakeholder communication and the need for flexible, offline-capable solutions in areas with infrastructure limitations.",
+        lessonLearned: "This project highlighted the importance of user-centered design in creating efficient business tools. It also reinforced the value of continuous stakeholder communication and the need for flexible.",
         duration: "2 months",
         teamSize: "3 members (backend, mobile, analyst/designer)",
         client: "Government instance",
         images: [projectImage1, projectImage2, projectImage3],
-        demoLink: "https://example.com/siresto-demo",
+        demoLink: "https://www.figma.com/proto/doKR027CB8dipO7VppI4wJ/SiResto?node-id=1526-2241&t=uT0l2QMAyWnvlk1G-1&scaling=min-zoom&content-scaling=fixed&page-id=1481%3A13651&starting-point-node-id=1526%3A2263",
         relatedDocuments: [
-          { title: "siResto Case Study", link: relatedDocument },
-          { title: "User Research Findings", link: "#" },
-          { title: "System Architecture", link: "#" }
+          { title: "SiResto App specification", link: relatedDocument },
+          { title: "User Guide", link: "#" },
+          { title: "Usability Testing", link: "#" }
         ]
       };
 

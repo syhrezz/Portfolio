@@ -12,8 +12,7 @@ const DetailedCVDPredictor = () => {
       "Conducted extensive research on hyperparameter optimization techniques",
       "Developed and trained the CatBoost model using Bayesian Optimization",
       "Designed and implemented the web application using Flask",
-      "Created a user-friendly interface for inputting patient data",
-      "Deployed the model and integrated it with the web application"
+      "Created a user-friendly interface for inputting patient data"
     ],
     problemStatement: "Cardiovascular disease is a leading cause of death globally. Early detection and classification of heart disease can significantly improve patient outcomes. This project aims to develop an accurate prediction model to assist healthcare providers in identifying high-risk patients.",
     solutionApproach: [
@@ -21,7 +20,7 @@ const DetailedCVDPredictor = () => {
       "Selected CatBoost with Bayesian Optimization as the best-performing model",
       "Built a Flask web application to host the prediction model",
       "Implemented features for easy data input and result interpretation",
-      "Ensured the application is scalable and can handle real-world usage"
+      "Ensured the application  can handle real-world usage"
     ],
     technicalDetails: {
       frontEnd: ["HTML", "CSS", "JavaScript"],
@@ -33,8 +32,7 @@ const DetailedCVDPredictor = () => {
       "Finding the optimal hyperparameters for the CatBoost model",
       "Ensuring the web application is responsive and user-friendly",
       "Handling large datasets and ensuring efficient data processing",
-      "Integrating the trained model with the Flask application",
-      "Maintaining data privacy and security"
+      "Integrating the trained model with the Flask application"
     ],
     keyAchievements: [
       "Achieved high accuracy in predicting cardiovascular disease",
@@ -44,7 +42,7 @@ const DetailedCVDPredictor = () => {
       "Published the findings in a well-received thesis"
     ],
     lessonLearned: "This project emphasized the value of rigorous research and experimentation in machine learning. It also showcased the importance of user-friendly design in application development.",
-    duration: "3 months",
+    duration: "4 months",
     teamSize: "1 member (solo project)",
     client: "Personal Research",
     images: [predictorImage1, predictorImage2, predictorImage3],

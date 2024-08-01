@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import projectImage1 from '../assets/lawtus.png';
-import projectImage2 from '../assets/lawtus.png';
-import projectImage3 from '../assets/lawtus.png';
+import projectImage2 from '../assets/lawtus-pic/mobile_mockup_3.png';
+import projectImage3 from '../assets/lawtus-pic/mobile_mockup_4.png';
 import relatedDocument from '../assets/Syah_CV.pdf';
 
 const DetailedLawtus = () => {
@@ -21,12 +21,12 @@ const DetailedLawtus = () => {
       "Developed user personas and customer journey maps",
       "Designed an intuitive interface for easy navigation and accessibility",
       "Integrated features for legal document management and lawyer-client communication",
-      "Created a scalable architecture to accommodate future enhancements"
+      "Create various requirement documents like Product Requirement Documents, Competitor Analysis, Business Model Canvas, Pitch Deck, etc."
     ],
     technicalDetails: {
-      frontEnd: ["React"],
-      backEnd: ["Node.js", "Express", "MongoDB"],
-      tools: ["Figma", "Jira", "Git", "Postman"]
+      frontEnd: ["-"],
+      backEnd: ["-"],
+      tools: ["Figma", "Trello", "Google Workspace"]
     },
     challenges: [
       "Balancing simplicity and functionality in the user interface",
@@ -37,15 +37,14 @@ const DetailedLawtus = () => {
     keyAchievements: [
       "Successfully developed a prototype within the bootcamp timeline",
       "Received positive feedback from users during testing",
-      "Identified key market needs and tailored the solution accordingly",
-      "Established a strong foundation for future development and scalability"
+      "Identified key market needs and tailored the solution accordingly"
     ],
     lessonLearned: "This project highlighted the importance of thorough user research and iterative design. It reinforced the value of teamwork and effective communication in delivering a successful product.",
-    duration: "3 months",
+    duration: "1.5 months",
     teamSize: "6 members (3 PMs, 3 UI/UX designers)",
     client: "Binar Academy - Final Project",
     images: [projectImage1, projectImage2, projectImage3],
-    demoLink: "https://example.com/lawtus-demo",
+    demoLink: "https://www.figma.com/proto/3iFcXSn8zoVDG6uI90wSe1/Mobile-Apps?node-id=174-388&t=TRFTxZ7gvBYE6rvC-1&scaling=min-zoom&content-scaling=fixed&page-id=101%3A2&starting-point-node-id=193%3A76&show-proto-sidebar=1",
     relatedDocuments: [
       { title: "Lawtus Case Study", link: relatedDocument },
       { title: "User Research Findings", link: "#" },
