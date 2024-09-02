@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import gitsImage from '../assets/company-pic/gits_ind.jpeg';
 import binarImage from '../assets/company-pic/binar.png';
 import rplImage from '../assets/company-pic/rpl.png';
+import brImage from '../assets/company-pic/BR - Kiri Atas - OFF.png';
 import './index.css';
 
 const experiences = [
@@ -26,6 +27,13 @@ const experiences = [
     role: "Business Analyst",
     description: "Translated business requirements into user stories, wireframes, and acceptance criteria. Assisted in project estimation, timeline planning, and resource allocation.",
     icon: gitsImage
+  },
+  {
+    company: "Burningroom, Surabaya",
+    period: "Aug 2024 - present",
+    role: "Business Analyst",
+    description: "Translated business requirements into user stories, wireframes, and acceptance criteria. Assisted in project estimation, timeline planning, and resource allocation.",
+    icon: brImage
   }
 ];
 
